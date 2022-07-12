@@ -1,38 +1,168 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  width: 40vw;
+  background-color: lightgray;
+  margin: 40px auto;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 80vh;
+  overflow: scroll;
+}
+.add-todo{
+  margin: 0 auto;
+  width: 50vw;
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.input-button{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.input-button > input{
+  width: 70%;
+  height: 35px;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+}
+.input-button > button{
+  width: 20%;
+  /* background-color: aqua; */
+  cursor: pointer;
+}
+.item-show{
+  display: flex;
+  flex-direction: row;
+  /* width: ; */
+  justify-content: space-between;
+  background: #A8A297;
+  margin: 10px 0;
+  padding: 0 20px;
+  height: 50px;
+  font-size: 1rem;
   align-items: center;
+  animation: showMe 1s forwards;
+ 
+}
+.item-done{
+  display: flex;
+  flex-direction: row;
+  /* width: ; */
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: lightgreen;
+  margin: 10px 0;
+  padding: 0 20px;
+  height: 50px;
+  font-size: 1rem;
+  align-items: center;
+  animation: showMe 1s forwards;
+  color: red;
+  
+}
+.show-todo{
+  width: 70%;
+}
+.checkbox{
+  display: flex;
+  flex-direction: row;
+  width: 15%;
+  justify-content: space-between;
+  transition: all 1s ease;
+  align-items: center;
+  font-size: 1.5rem;
+}
+svg{
+  width: 24px;
+  height: 24px;
+  /* color: brown; */
+}
+.checkbox > svg:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  color: blue;
+}
+.checkbox > p:hover{
+  transform: scale(1.1);
+  color: blue;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.input-edit{
+  font-size: 1rem;
+  padding: 5px;
+  /* border: 1; */
+}
+.del{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.body{
+  width: 50vw;
+  margin: 0 auto;
+  /* position: relative; */
+}
+.body > header{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(204, 147, 147);
+  padding: 20px;
+}
+.footer{
+  position: absolute;
+  bottom: 5vh;
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+.footer > button{
+  width: 20%;
+  font-size: 1.5rem;
+  background-color: rgb(204, 147, 147);
+  color: aliceblue;
+  cursor: pointer;
+  border: 0;
+  padding: 10px ;
+}
+.item-list{
+  height: 50vh;
+  overflow-y: scroll;
+  background-color: #F3F4F4;
+}
+.item-list > h3{
+  text-align: center;
+  color: red;
+}
+.done{
+  width: 50vw;
+  margin: 0 auto;
+  /* padding: 5px 20px; */
+  background-color: #F3F4F4;
+  height: 50vh;
+  overflow-y: scroll;
+}
+.return-item{
+  transition: all 1s ease;
+}
+.return-item > svg:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+  color: rgb(13, 13, 224);
+}
+a{
+  text-decoration: none;
+  font-size: 24px;
+  color: black;
+}
+@keyframes showMe{
+  0%{
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    opacity: 1;
   }
 }
